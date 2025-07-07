@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Dashboard Monitoring Getaran Jembatan</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" /><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>body { background-color: #f0f2f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }.card { border: none; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 24px; }.chart-container { position: relative; height: 280px; }.scalogram-img { width: 100%; max-height: 250px; object-fit: contain; border: 1px solid #dee2e6; border-radius: 0.25rem; }.condition-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; border-radius: 5px; margin-bottom: 8px; color: white; transition: background-color 0.3s ease; }.condition-label { font-weight: 600; font-size: 1rem; }.condition-value { font-size: 1rem; font-weight: 500; }.condition-details { font-size: 0.85rem; color: #e9ecef; }h2, h5 { color: #343a40; }</style>
+</head>
+<body>
+<div class="container-fluid my-4">
+    <h2 class="mb-4 text-center">Dashboard Monitoring Getaran Jembatan</h2>
+    <div class="row text-center">
+        <div class="col"><div class="card text-white bg-success"><div class="card-body"><h5 class="card-title text-white">Accel X</h5><p class="card-text fs-4" id="x_value">0</p></div></div></div>
+        <div class="col"><div class="card text-white bg-primary"><div class="card-body"><h5 class="card-title text-white">Accel Y</h5><p class="card-text fs-4" id="y_value">0</p></div></div></div>
+        <div class="col"><div class="card text-white bg-danger"><div class="card-body"><h5 class="card-title text-white">Accel Z</h5><p class="card-text fs-4" id="z_value">0</p></div></div></div>
+        <div class="col"><div class="card text-dark bg-warning"><div class="card-body"><h5 class="card-title text-dark">Suhu (°C)</h5><p class="card-text fs-4" id="temperature">0</p></div></div></div>
+        <div class="col"><div class="card text-dark bg-info"><div class="card-body"><h5 class="card-title text-dark">Kelembapan (%)</h5><p class="card-text fs-4" id="humidity">0</p></div></div></div>
+    </div>
+    <div class="card">
+        <div class="card-body bg-dark text-white rounded">
+            <h5 class="card-title text-center mb-3 text-white">Penilaian Kondisi per Sumbu</h5>
+            <div id="condition-row-x" class="condition-row bg-secondary"><span class="condition-label">Sumbu X</span><span id="condition-text-x" class="condition-value">-</span><span id="condition-details-x" class="condition-details">Freq: - Hz | Amp: -</span></div>
+            <div id="condition-row-y" class="condition-row bg-secondary"><span class="condition-label">Sumbu Y</span><span id="condition-text-y" class="condition-value">-</span><span id="condition-details-y" class="condition-details">Freq: - Hz | Amp: -</span></div>
+            <div id="condition-row-z" class="condition-row bg-secondary"><span class="condition-label">Sumbu Z</span><span id="condition-text-z" class="condition-value">-</span><span id="condition-details-z" class="condition-details">Freq: - Hz | Amp: -</span></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"><div class="card h-100"><div class="card-body"><h5 class="card-title">Tren Getaran Sumbu X</h5><div class="chart-container"><canvas id="vibrationChartX"></canvas></div></div></div></div>
+        <div class="col-lg-4"><div class="card h-100"><div class="card-body"><h5 class="card-title">Tren Getaran Sumbu Y</h5><div class="chart-container"><canvas id="vibrationChartY"></canvas></div></div></div></div>
+        <div class="col-lg-4"><div class="card h-100"><div class="card-body"><h5 class="card-title">Tren Getaran Sumbu Z</h5><div class="chart-container"><canvas id="vibrationChartZ"></canvas></div></div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="card-title mb-0">Analisis CWT Scalogram</h5>
+            <a href="/downloads" target="_blank" class="btn btn-primary btn-sm">Buka Pusat Unduhan</a>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center"><h6 class="text-muted">Sumbu X</h6><img src="" alt="Scalogram X" class="scalogram-img mb-2" id="scalogram_x" /></div>
+            <div class="col-md-4 text-center"><h6 class="text-muted">Sumbu Y</h6><img src="" alt="Scalogram Y" class="scalogram-img mb-2" id="scalogram_y" /></div>
+            <div class="col-md-4 text-center"><h6 class="text-muted">Sumbu Z</h6><img src="" alt="Scalogram Z" class="scalogram-img mb-2" id="scalogram_z" /></div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+    const chartOptions = { responsive: true, maintainAspectRatio: false, animation: { duration: 0 }, scales: { x: { ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 7 } }, y: { title: { display: true, text: 'Amplitude' } } }, plugins: { legend: { display: false } } };
+    const chartX = new Chart(document.getElementById('vibrationChartX').getContext('2d'), { type: 'line', data: { labels: [], datasets: [{ label: 'Accel X', borderColor: '#28a745', data: [], fill: false, borderWidth: 1.5, pointRadius: 0 }] }, options: chartOptions });
+    const chartY = new Chart(document.getElementById('vibrationChartY').getContext('2d'), { type: 'line', data: { labels: [], datasets: [{ label: 'Accel Y', borderColor: '#007bff', data: [], fill: false, borderWidth: 1.5, pointRadius: 0 }] }, options: chartOptions });
+    const chartZ = new Chart(document.getElementById('vibrationChartZ').getContext('2d'), { type: 'line', data: { labels: [], datasets: [{ label: 'Accel Z', borderColor: '#dc3545', data: [], fill: false, borderWidth: 1.5, pointRadius: 0 }] }, options: chartOptions });
+
+    function updateDashboard(data) {
+        document.getElementById('x_value').textContent = data.accel_x;
+        document.getElementById('y_value').textContent = data.accel_y;
+        document.getElementById('z_value').textContent = data.accel_z;
+        document.getElementById('temperature').textContent = data.temperature.toFixed(1);
+        document.getElementById('humidity').textContent = data.humidity.toFixed(1);
+
+        const timestamps = data.chart_data_x.timestamps;
+        chartX.data.labels = timestamps; chartX.data.datasets[0].data = data.chart_data_x.values; chartX.update();
+        chartY.data.labels = timestamps; chartY.data.datasets[0].data = data.chart_data_y.values; chartY.update();
+        chartZ.data.labels = timestamps; chartZ.data.datasets[0].data = data.chart_data_z.values; chartZ.update();
+
+        const currentTimestamp = Date.now();
+        ['x', 'y', 'z'].forEach(axis => {
+            updateConditionRow(data[`analysis_${axis}`], axis);
+            const imgElement = document.getElementById(`scalogram_${axis}`);
+            if (imgElement) imgElement.src = `/static/scalogram_${axis}.png?ts=${currentTimestamp}`;
+        });
+    }
+
+    function updateConditionRow(analysis, axis) {
+        const row = document.getElementById(`condition-row-${axis}`);
+        const text = document.getElementById(`condition-text-${axis}`);
+        const details = document.getElementById(`condition-details-${axis}`);
+        const condition = analysis.condition_assessment || "-";
+        const freq = analysis.dominant_freq !== null ? analysis.dominant_freq.toFixed(2) : "-";
+        const amp = analysis.max_amplitude !== null ? analysis.max_amplitude.toFixed(0) : "-";
+        text.textContent = condition;
+        details.textContent = `Freq: ${freq} Hz | Amp: ${amp}`;
+        row.className = 'condition-row';
+        if (condition.includes("Baik")) row.classList.add("bg-success");
+        else if (condition.includes("Cukup")) row.classList.add("bg-primary");
+        else if (condition.includes("Sedang")) row.classList.add("bg-warning", "text-dark");
+        else if (condition.includes("Buruk")) row.classList.add("bg-danger");
+        else row.classList.add("bg-secondary");
+    }
+
+
+    setInterval(() => {
+        fetch('/api/latest')
+            .then(res => res.json())
+            .then(data => {
+                if(data.error) return console.error("API Error:", data.error);
+                updateDashboard(data);
+            })
+            .catch(error => console.error("Fetch Error:", error));
+    }, 2000);
+</script>
+</body>
+</html>

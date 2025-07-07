@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Unduhan Data Getaran</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { max-width: 960px; }
+        .card { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2>Pusat Unduhan Data Getaran</h2>
+            <p class="lead text-muted">Pilih data yang ingin Anda unduh atau kelola dari opsi di bawah ini.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Download Snapshot Terbaru</h5>
+                <p class="card-text">Unduh file .zip yang berisi 128 data point terakhir beserta ringkasan analisis dan spektrum CWT untuk semua sumbu.</p>
+                <a href="/api/download" class="btn btn-primary" download>Download Snapshot (.zip)</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title mb-0">Download Log Anomali</h5>
+                    <button class="btn btn-danger btn-sm" id="deleteAllButton">Hapus Semua Log</button>
+                </div>
+                <p class="card-text">Pilih dan unduh file .json dari peristiwa anomali spesifik yang telah terekam, atau hapus log yang sudah tidak diperlukan.</p>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nama File (Urutan Terbaru)</th>
+                                <th scope="col" class="text-end">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="anomaly-files-table">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+    const tableBody = document.getElementById('anomaly-files-table');
+    const deleteAllButton = document.getElementById('deleteAllButton');
+
+    // --- MODIFIKASI: Fungsi untuk memuat file dan menambahkan tombol aksi ---
+    function loadAnomalyFiles() {
+        fetch('/api/anomalies')
+            .then(res => res.json())
+            .then(files => {
+                tableBody.innerHTML = ''; // Kosongkan tabel
+
+                if (files && files.length > 0) {
+                    files.forEach(file => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-json" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1.5v-1.5a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5V16H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM9.793 1.293a.5.5 0 0 1 .353.147l3 3a.5.5 0 0 1 .147.353V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.793ZM5.5 14.5a.5.5 0 0 0 .5.5h1.5a.5.5 0 0 0 .5-.5V13h-2.5v1.5Zm2.5-.5a.5.5 0 0 0 .5.5h1.5a.5.5 0 0 0 .5-.5V13h-2.5v1.5Z"/></svg>
+                                ${file}
+                            </td>
+                            <td class="text-end">
+                                <a href="/anomalies/${file}" class="btn btn-sm btn-outline-secondary" download>Download</a>
+                                <button class="btn btn-sm btn-outline-danger delete-btn" data-filename="${file}">Hapus</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                } else {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td colspan="2" class="text-center text-muted">Belum ada anomali yang tercatat.</td>`;
+                    tableBody.appendChild(row);
+                }
+            })
+            .catch(error => {
+                console.error("Gagal memuat log anomali:", error);
+                tableBody.innerHTML = `<tr><td colspan="2" class="text-center text-danger">Gagal memuat data.</td></tr>`;
+            });
+    }
+
+    // --- MODIFIKASI: Event listener untuk menghapus satu file ---
+    tableBody.addEventListener('click', function(event) {
+        if (event.target && event.target.classList.contains('delete-btn')) {
+            const filename = event.target.dataset.filename;
+            
+            if (confirm(`Anda yakin ingin menghapus file "${filename}" secara permanen?`)) {
+                fetch(`/api/anomalies/${filename}`, {
+                    method: 'DELETE'
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.status === 'success') {
+                        alert(data.message);
+                        loadAnomalyFiles(); // Muat ulang daftar file setelah berhasil dihapus
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                })
+                .catch(err => alert('Terjadi kesalahan pada jaringan.'));
+            }
+        }
+    });
+
+    // --- MODIFIKASI: Event listener untuk menghapus semua file ---
+    deleteAllButton.addEventListener('click', function() {
+        if (confirm('PERINGATAN: Semua file log anomali akan dihapus permanen. Aksi ini tidak bisa dibatalkan. Lanjutkan?')) {
+            fetch('/api/anomalies/delete-all', {
+                method: 'POST'
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.status === 'success') {
+                    alert(data.message);
+                    loadAnomalyFiles(); // Muat ulang daftar file
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(err => alert('Terjadi kesalahan pada jaringan.'));
+        }
+    });
+
+    // Panggil fungsi saat halaman selesai dimuat
+    document.addEventListener('DOMContentLoaded', loadAnomalyFiles);
+</script>
+</body>
+</html>

@@ -1,0 +1,790 @@
+{
+    "event_timestamp": "2025-07-06T23:24:06.836010",
+    "analysis_summary": {
+        "x": {
+            "condition": "Buruk (Rusak Berat)",
+            "dominant_freq": 1.72,
+            "max_amplitude": 41490.42631898626
+        },
+        "y": {
+            "condition": "Buruk (Rusak Berat)",
+            "dominant_freq": 4.55,
+            "max_amplitude": 15237.756685253733
+        },
+        "z": {
+            "condition": "Buruk (Rusak Berat)",
+            "dominant_freq": 2.94,
+            "max_amplitude": 16854.7400586769
+        }
+    },
+    "raw_data": [
+        {
+            "timestamp": "2025-07-06T23:23:24.158369",
+            "accel_x": 24,
+            "accel_y": 0,
+            "accel_z": 16329
+        },
+        {
+            "timestamp": "2025-07-06T23:23:24.493446",
+            "accel_x": 35,
+            "accel_y": -4,
+            "accel_z": 16323
+        },
+        {
+            "timestamp": "2025-07-06T23:23:24.793525",
+            "accel_x": 55,
+            "accel_y": -2,
+            "accel_z": 16334
+        },
+        {
+            "timestamp": "2025-07-06T23:23:25.107227",
+            "accel_x": 42,
+            "accel_y": -7,
+            "accel_z": 16309
+        },
+        {
+            "timestamp": "2025-07-06T23:23:25.415451",
+            "accel_x": 39,
+            "accel_y": 18,
+            "accel_z": 16317
+        },
+        {
+            "timestamp": "2025-07-06T23:23:25.722949",
+            "accel_x": 20,
+            "accel_y": 18,
+            "accel_z": 16333
+        },
+        {
+            "timestamp": "2025-07-06T23:23:26.029058",
+            "accel_x": -3,
+            "accel_y": 27,
+            "accel_z": 16329
+        },
+        {
+            "timestamp": "2025-07-06T23:23:26.336517",
+            "accel_x": -16,
+            "accel_y": 10,
+            "accel_z": 16323
+        },
+        {
+            "timestamp": "2025-07-06T23:23:26.652789",
+            "accel_x": -29,
+            "accel_y": -9,
+            "accel_z": 16337
+        },
+        {
+            "timestamp": "2025-07-06T23:23:27.158170",
+            "accel_x": -14,
+            "accel_y": -26,
+            "accel_z": 16368
+        },
+        {
+            "timestamp": "2025-07-06T23:23:27.463044",
+            "accel_x": 3,
+            "accel_y": -38,
+            "accel_z": 16350
+        },
+        {
+            "timestamp": "2025-07-06T23:23:27.769046",
+            "accel_x": 18,
+            "accel_y": -37,
+            "accel_z": 16395
+        },
+        {
+            "timestamp": "2025-07-06T23:23:28.043099",
+            "accel_x": 8,
+            "accel_y": -26,
+            "accel_z": 16412
+        },
+        {
+            "timestamp": "2025-07-06T23:23:28.325769",
+            "accel_x": 15,
+            "accel_y": -17,
+            "accel_z": 16399
+        },
+        {
+            "timestamp": "2025-07-06T23:23:28.691848",
+            "accel_x": 13,
+            "accel_y": -22,
+            "accel_z": 16373
+        },
+        {
+            "timestamp": "2025-07-06T23:23:29.101579",
+            "accel_x": 11,
+            "accel_y": -34,
+            "accel_z": 16393
+        },
+        {
+            "timestamp": "2025-07-06T23:23:29.408484",
+            "accel_x": -12,
+            "accel_y": -52,
+            "accel_z": 16356
+        },
+        {
+            "timestamp": "2025-07-06T23:23:29.720796",
+            "accel_x": 8,
+            "accel_y": -61,
+            "accel_z": 16334
+        },
+        {
+            "timestamp": "2025-07-06T23:23:29.993395",
+            "accel_x": 17,
+            "accel_y": -38,
+            "accel_z": 16381
+        },
+        {
+            "timestamp": "2025-07-06T23:23:30.275003",
+            "accel_x": -10,
+            "accel_y": -58,
+            "accel_z": 16384
+        },
+        {
+            "timestamp": "2025-07-06T23:23:30.637009",
+            "accel_x": 4,
+            "accel_y": -34,
+            "accel_z": 16358
+        },
+        {
+            "timestamp": "2025-07-06T23:23:30.944459",
+            "accel_x": 36,
+            "accel_y": -34,
+            "accel_z": 16363
+        },
+        {
+            "timestamp": "2025-07-06T23:23:31.353940",
+            "accel_x": 22,
+            "accel_y": -23,
+            "accel_z": 16393
+        },
+        {
+            "timestamp": "2025-07-06T23:23:31.633800",
+            "accel_x": 12,
+            "accel_y": -26,
+            "accel_z": 16365
+        },
+        {
+            "timestamp": "2025-07-06T23:23:31.902983",
+            "accel_x": 26,
+            "accel_y": 9,
+            "accel_z": 16370
+        },
+        {
+            "timestamp": "2025-07-06T23:23:32.276675",
+            "accel_x": -4,
+            "accel_y": -18,
+            "accel_z": 16378
+        },
+        {
+            "timestamp": "2025-07-06T23:23:32.551397",
+            "accel_x": -34,
+            "accel_y": -17,
+            "accel_z": 16375
+        },
+        {
+            "timestamp": "2025-07-06T23:23:32.890966",
+            "accel_x": -19,
+            "accel_y": -13,
+            "accel_z": 16373
+        },
+        {
+            "timestamp": "2025-07-06T23:23:33.218036",
+            "accel_x": -16,
+            "accel_y": -31,
+            "accel_z": 16374
+        },
+        {
+            "timestamp": "2025-07-06T23:23:33.913722",
+            "accel_x": -24,
+            "accel_y": -40,
+            "accel_z": 16383
+        },
+        {
+            "timestamp": "2025-07-06T23:23:34.203550",
+            "accel_x": -27,
+            "accel_y": -14,
+            "accel_z": 16363
+        },
+        {
+            "timestamp": "2025-07-06T23:23:34.632027",
+            "accel_x": -27,
+            "accel_y": -27,
+            "accel_z": 16377
+        },
+        {
+            "timestamp": "2025-07-06T23:23:35.101304",
+            "accel_x": -59,
+            "accel_y": -61,
+            "accel_z": 16365
+        },
+        {
+            "timestamp": "2025-07-06T23:23:35.554384",
+            "accel_x": -68,
+            "accel_y": -55,
+            "accel_z": 16378
+        },
+        {
+            "timestamp": "2025-07-06T23:23:35.908166",
+            "accel_x": -407,
+            "accel_y": -195,
+            "accel_z": 16284
+        },
+        {
+            "timestamp": "2025-07-06T23:23:36.274693",
+            "accel_x": -668,
+            "accel_y": -354,
+            "accel_z": 16257
+        },
+        {
+            "timestamp": "2025-07-06T23:23:36.679315",
+            "accel_x": -1028,
+            "accel_y": -374,
+            "accel_z": 16182
+        },
+        {
+            "timestamp": "2025-07-06T23:23:36.960370",
+            "accel_x": -687,
+            "accel_y": -208,
+            "accel_z": 16237
+        },
+        {
+            "timestamp": "2025-07-06T23:23:37.293884",
+            "accel_x": -218,
+            "accel_y": -122,
+            "accel_z": 16284
+        },
+        {
+            "timestamp": "2025-07-06T23:23:37.600587",
+            "accel_x": 124,
+            "accel_y": 27,
+            "accel_z": 16369
+        },
+        {
+            "timestamp": "2025-07-06T23:23:37.873126",
+            "accel_x": 244,
+            "accel_y": 165,
+            "accel_z": 16403
+        },
+        {
+            "timestamp": "2025-07-06T23:23:38.168053",
+            "accel_x": 776,
+            "accel_y": 310,
+            "accel_z": 16517
+        },
+        {
+            "timestamp": "2025-07-06T23:23:38.521528",
+            "accel_x": 476,
+            "accel_y": 174,
+            "accel_z": 16481
+        },
+        {
+            "timestamp": "2025-07-06T23:23:38.798778",
+            "accel_x": 276,
+            "accel_y": 141,
+            "accel_z": 16477
+        },
+        {
+            "timestamp": "2025-07-06T23:23:39.103214",
+            "accel_x": 753,
+            "accel_y": 208,
+            "accel_z": 16550
+        },
+        {
+            "timestamp": "2025-07-06T23:23:39.383218",
+            "accel_x": 816,
+            "accel_y": 190,
+            "accel_z": 16563
+        },
+        {
+            "timestamp": "2025-07-06T23:23:39.653258",
+            "accel_x": 273,
+            "accel_y": -43,
+            "accel_z": 16429
+        },
+        {
+            "timestamp": "2025-07-06T23:23:39.954789",
+            "accel_x": -208,
+            "accel_y": -128,
+            "accel_z": 16338
+        },
+        {
+            "timestamp": "2025-07-06T23:23:40.365376",
+            "accel_x": -938,
+            "accel_y": -290,
+            "accel_z": 16192
+        },
+        {
+            "timestamp": "2025-07-06T23:23:40.638719",
+            "accel_x": -1026,
+            "accel_y": -229,
+            "accel_z": 16211
+        },
+        {
+            "timestamp": "2025-07-06T23:23:40.923137",
+            "accel_x": -1357,
+            "accel_y": -226,
+            "accel_z": 16125
+        },
+        {
+            "timestamp": "2025-07-06T23:23:41.207404",
+            "accel_x": -1092,
+            "accel_y": -146,
+            "accel_z": 16183
+        },
+        {
+            "timestamp": "2025-07-06T23:23:41.509602",
+            "accel_x": -1097,
+            "accel_y": -139,
+            "accel_z": 16182
+        },
+        {
+            "timestamp": "2025-07-06T23:23:42.004169",
+            "accel_x": -1050,
+            "accel_y": -60,
+            "accel_z": 16187
+        },
+        {
+            "timestamp": "2025-07-06T23:23:42.358732",
+            "accel_x": -1309,
+            "accel_y": -136,
+            "accel_z": 16111
+        },
+        {
+            "timestamp": "2025-07-06T23:23:42.644340",
+            "accel_x": -1190,
+            "accel_y": -153,
+            "accel_z": 16092
+        },
+        {
+            "timestamp": "2025-07-06T23:23:43.027892",
+            "accel_x": -2042,
+            "accel_y": -373,
+            "accel_z": 15955
+        },
+        {
+            "timestamp": "2025-07-06T23:23:43.439723",
+            "accel_x": -918,
+            "accel_y": -230,
+            "accel_z": 16239
+        },
+        {
+            "timestamp": "2025-07-06T23:23:43.745605",
+            "accel_x": -2118,
+            "accel_y": -426,
+            "accel_z": 15928
+        },
+        {
+            "timestamp": "2025-07-06T23:23:44.057264",
+            "accel_x": -2232,
+            "accel_y": -879,
+            "accel_z": 15869
+        },
+        {
+            "timestamp": "2025-07-06T23:23:44.359416",
+            "accel_x": -876,
+            "accel_y": -1146,
+            "accel_z": 15904
+        },
+        {
+            "timestamp": "2025-07-06T23:23:44.672066",
+            "accel_x": 51,
+            "accel_y": -26,
+            "accel_z": 15314
+        },
+        {
+            "timestamp": "2025-07-06T23:23:44.954808",
+            "accel_x": -1914,
+            "accel_y": 94,
+            "accel_z": 15796
+        },
+        {
+            "timestamp": "2025-07-06T23:23:45.280743",
+            "accel_x": 876,
+            "accel_y": -739,
+            "accel_z": 15854
+        },
+        {
+            "timestamp": "2025-07-06T23:23:45.691336",
+            "accel_x": -577,
+            "accel_y": 93,
+            "accel_z": 16949
+        },
+        {
+            "timestamp": "2025-07-06T23:23:45.963426",
+            "accel_x": -844,
+            "accel_y": -947,
+            "accel_z": 16253
+        },
+        {
+            "timestamp": "2025-07-06T23:23:46.233401",
+            "accel_x": 828,
+            "accel_y": -1548,
+            "accel_z": 17290
+        },
+        {
+            "timestamp": "2025-07-06T23:23:46.611536",
+            "accel_x": 4445,
+            "accel_y": -3063,
+            "accel_z": 15523
+        },
+        {
+            "timestamp": "2025-07-06T23:23:47.021687",
+            "accel_x": 2615,
+            "accel_y": -1957,
+            "accel_z": 15635
+        },
+        {
+            "timestamp": "2025-07-06T23:23:47.295269",
+            "accel_x": 4964,
+            "accel_y": -2720,
+            "accel_z": 13639
+        },
+        {
+            "timestamp": "2025-07-06T23:23:47.562154",
+            "accel_x": 5134,
+            "accel_y": -1242,
+            "accel_z": 14293
+        },
+        {
+            "timestamp": "2025-07-06T23:23:47.942780",
+            "accel_x": 3308,
+            "accel_y": -1829,
+            "accel_z": 14525
+        },
+        {
+            "timestamp": "2025-07-06T23:23:48.230218",
+            "accel_x": 496,
+            "accel_y": -1310,
+            "accel_z": 16337
+        },
+        {
+            "timestamp": "2025-07-06T23:23:48.511054",
+            "accel_x": 6876,
+            "accel_y": -4666,
+            "accel_z": 18612
+        },
+        {
+            "timestamp": "2025-07-06T23:23:48.864261",
+            "accel_x": -517,
+            "accel_y": -6446,
+            "accel_z": 22728
+        },
+        {
+            "timestamp": "2025-07-06T23:23:49.274938",
+            "accel_x": 2354,
+            "accel_y": -6947,
+            "accel_z": 26003
+        },
+        {
+            "timestamp": "2025-07-06T23:23:49.582935",
+            "accel_x": -3933,
+            "accel_y": -5935,
+            "accel_z": 28665
+        },
+        {
+            "timestamp": "2025-07-06T23:23:49.908543",
+            "accel_x": -9918,
+            "accel_y": -3223,
+            "accel_z": 31099
+        },
+        {
+            "timestamp": "2025-07-06T23:23:50.298972",
+            "accel_x": -22119,
+            "accel_y": 6584,
+            "accel_z": 31978
+        },
+        {
+            "timestamp": "2025-07-06T23:23:50.605282",
+            "accel_x": -22119,
+            "accel_y": 4356,
+            "accel_z": 31978
+        },
+        {
+            "timestamp": "2025-07-06T23:23:50.888837",
+            "accel_x": -32428,
+            "accel_y": 7718,
+            "accel_z": 21644
+        },
+        {
+            "timestamp": "2025-07-06T23:23:51.221475",
+            "accel_x": -32428,
+            "accel_y": 10026,
+            "accel_z": 14772
+        },
+        {
+            "timestamp": "2025-07-06T23:23:51.635611",
+            "accel_x": -30494,
+            "accel_y": 9800,
+            "accel_z": 12440
+        },
+        {
+            "timestamp": "2025-07-06T23:23:52.049225",
+            "accel_x": -30494,
+            "accel_y": 814,
+            "accel_z": 11393
+        },
+        {
+            "timestamp": "2025-07-06T23:23:52.344889",
+            "accel_x": -30494,
+            "accel_y": 1035,
+            "accel_z": 8484
+        },
+        {
+            "timestamp": "2025-07-06T23:23:52.615222",
+            "accel_x": -30494,
+            "accel_y": -2572,
+            "accel_z": 16908
+        },
+        {
+            "timestamp": "2025-07-06T23:23:52.965630",
+            "accel_x": -25749,
+            "accel_y": -4595,
+            "accel_z": 19606
+        },
+        {
+            "timestamp": "2025-07-06T23:23:53.270169",
+            "accel_x": -27684,
+            "accel_y": -10306,
+            "accel_z": 16621
+        },
+        {
+            "timestamp": "2025-07-06T23:23:53.581434",
+            "accel_x": -15616,
+            "accel_y": -9048,
+            "accel_z": 11834
+        },
+        {
+            "timestamp": "2025-07-06T23:23:53.922214",
+            "accel_x": -15616,
+            "accel_y": -2697,
+            "accel_z": 10129
+        },
+        {
+            "timestamp": "2025-07-06T23:23:54.297511",
+            "accel_x": -6677,
+            "accel_y": -2198,
+            "accel_z": 7137
+        },
+        {
+            "timestamp": "2025-07-06T23:23:54.606103",
+            "accel_x": -9181,
+            "accel_y": -4202,
+            "accel_z": 9446
+        },
+        {
+            "timestamp": "2025-07-06T23:23:55.014445",
+            "accel_x": -4207,
+            "accel_y": -143,
+            "accel_z": 12225
+        },
+        {
+            "timestamp": "2025-07-06T23:23:55.316522",
+            "accel_x": -10036,
+            "accel_y": 1086,
+            "accel_z": 15245
+        },
+        {
+            "timestamp": "2025-07-06T23:23:55.614987",
+            "accel_x": -3748,
+            "accel_y": -1024,
+            "accel_z": 16685
+        },
+        {
+            "timestamp": "2025-07-06T23:23:56.032571",
+            "accel_x": -6364,
+            "accel_y": -931,
+            "accel_z": 18310
+        },
+        {
+            "timestamp": "2025-07-06T23:23:56.451098",
+            "accel_x": -2022,
+            "accel_y": 126,
+            "accel_z": 17052
+        },
+        {
+            "timestamp": "2025-07-06T23:23:56.867684",
+            "accel_x": -363,
+            "accel_y": 181,
+            "accel_z": 16481
+        },
+        {
+            "timestamp": "2025-07-06T23:23:57.162653",
+            "accel_x": -237,
+            "accel_y": 141,
+            "accel_z": 16319
+        },
+        {
+            "timestamp": "2025-07-06T23:23:57.580217",
+            "accel_x": -200,
+            "accel_y": -18,
+            "accel_z": 16255
+        },
+        {
+            "timestamp": "2025-07-06T23:23:57.983982",
+            "accel_x": 142,
+            "accel_y": 33,
+            "accel_z": 16449
+        },
+        {
+            "timestamp": "2025-07-06T23:23:58.491784",
+            "accel_x": -8,
+            "accel_y": 45,
+            "accel_z": 16365
+        },
+        {
+            "timestamp": "2025-07-06T23:23:58.799911",
+            "accel_x": -86,
+            "accel_y": 61,
+            "accel_z": 16306
+        },
+        {
+            "timestamp": "2025-07-06T23:23:59.110757",
+            "accel_x": 148,
+            "accel_y": 210,
+            "accel_z": 16366
+        },
+        {
+            "timestamp": "2025-07-06T23:23:59.418266",
+            "accel_x": 255,
+            "accel_y": 146,
+            "accel_z": 16433
+        },
+        {
+            "timestamp": "2025-07-06T23:23:59.821417",
+            "accel_x": 51,
+            "accel_y": 79,
+            "accel_z": 16346
+        },
+        {
+            "timestamp": "2025-07-06T23:24:00.106825",
+            "accel_x": 132,
+            "accel_y": 29,
+            "accel_z": 16422
+        },
+        {
+            "timestamp": "2025-07-06T23:24:00.388996",
+            "accel_x": -156,
+            "accel_y": -133,
+            "accel_z": 16390
+        },
+        {
+            "timestamp": "2025-07-06T23:24:00.743036",
+            "accel_x": -132,
+            "accel_y": -200,
+            "accel_z": 16431
+        },
+        {
+            "timestamp": "2025-07-06T23:24:01.054202",
+            "accel_x": -248,
+            "accel_y": -142,
+            "accel_z": 16367
+        },
+        {
+            "timestamp": "2025-07-06T23:24:01.513478",
+            "accel_x": -6,
+            "accel_y": -41,
+            "accel_z": 16428
+        },
+        {
+            "timestamp": "2025-07-06T23:24:01.815720",
+            "accel_x": -225,
+            "accel_y": -61,
+            "accel_z": 16337
+        },
+        {
+            "timestamp": "2025-07-06T23:24:02.388623",
+            "accel_x": 60,
+            "accel_y": 98,
+            "accel_z": 16432
+        },
+        {
+            "timestamp": "2025-07-06T23:24:02.684279",
+            "accel_x": 45,
+            "accel_y": 63,
+            "accel_z": 16441
+        },
+        {
+            "timestamp": "2025-07-06T23:24:03.002309",
+            "accel_x": 200,
+            "accel_y": 54,
+            "accel_z": 16514
+        },
+        {
+            "timestamp": "2025-07-06T23:24:03.414443",
+            "accel_x": 108,
+            "accel_y": 4,
+            "accel_z": 16489
+        },
+        {
+            "timestamp": "2025-07-06T23:24:03.897483",
+            "accel_x": 236,
+            "accel_y": 40,
+            "accel_z": 16506
+        },
+        {
+            "timestamp": "2025-07-06T23:24:04.212055",
+            "accel_x": 320,
+            "accel_y": -53,
+            "accel_z": 16513
+        },
+        {
+            "timestamp": "2025-07-06T23:24:04.511353",
+            "accel_x": 241,
+            "accel_y": 49,
+            "accel_z": 16439
+        },
+        {
+            "timestamp": "2025-07-06T23:24:04.797336",
+            "accel_x": -177,
+            "accel_y": 10,
+            "accel_z": 16241
+        },
+        {
+            "timestamp": "2025-07-06T23:24:05.068489",
+            "accel_x": 164,
+            "accel_y": 28,
+            "accel_z": 16214
+        },
+        {
+            "timestamp": "2025-07-06T23:24:05.455248",
+            "accel_x": -1836,
+            "accel_y": -1018,
+            "accel_z": 16605
+        },
+        {
+            "timestamp": "2025-07-06T23:24:05.760164",
+            "accel_x": -6722,
+            "accel_y": -158,
+            "accel_z": 17824
+        },
+        {
+            "timestamp": "2025-07-06T23:24:06.065729",
+            "accel_x": -4712,
+            "accel_y": -1170,
+            "accel_z": 17393
+        },
+        {
+            "timestamp": "2025-07-06T23:24:06.342535",
+            "accel_x": -7174,
+            "accel_y": 141,
+            "accel_z": 18053
+        },
+        {
+            "timestamp": "2025-07-06T23:24:06.749822",
+            "accel_x": -14129,
+            "accel_y": 2379,
+            "accel_z": 18576
+        },
+        {
+            "timestamp": "2025-07-06T23:24:07.194072",
+            "accel_x": -11492,
+            "accel_y": 2128,
+            "accel_z": 17934
+        },
+        {
+            "timestamp": "2025-07-06T23:24:07.469557",
+            "accel_x": -984,
+            "accel_y": 3384,
+            "accel_z": 17083
+        }
+    ]
+}
